@@ -1,11 +1,34 @@
-
+.body{
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100%;
+    min-height: 100vh; 
+    margin: 0;
+    --s: 60px;
+    --c1: #6ca700;
+    --c2: #406102;
+    --_g: radial-gradient(
+      25% 25% at 25% 25%,
+      var(--c1) 99%,
+      rgba(0, 0, 0, 0) 101%
+    );
+    background: var(--_g) var(--s) var(--s) / calc(2 * var(--s))
+        calc(2 * var(--s)),
+      var(--_g) 0 0 / calc(2 * var(--s)) calc(2 * var(--s)),
+      radial-gradient(50% 50%, var(--c2) 98%, rgba(0, 0, 0, 0)) 0 0 / var(--s)
+        var(--s),
+      repeating-conic-gradient(var(--c2) 0 50%, var(--c1) 0 100%)
+        calc(0.5 * var(--s)) 0 / calc(2 * var(--s)) var(--s);
+}
 .container {
-    align-items: center;
     width: min(450px, 90%);
-    background: #3bc02f;
+    background: #7abb02;
     border-radius: 8px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px 20px,
         rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    padding: 20px;
 }
 
 .container p {
@@ -28,7 +51,7 @@
     width: 83%;
     height: 55px;
     color: #fff;
-    background: #10490b;
+    background: #568008;
     font-size: 1.06rem;
     font-weight: 500;
     border-radius: 4px;
@@ -96,7 +119,7 @@
     border: none;
     outline: none;
     cursor: grab;
-    background: #9ddaac;
+    background: #2e770c;
     font-size: 1.06rem;
     font-family: 'Times New Roman';
     padding: 0.94rem;
@@ -106,5 +129,5 @@
 }
 
 .wrapper .generate-btn:hover {
-    background: #0a5e2a;
+    background: #4e720a;
 }
